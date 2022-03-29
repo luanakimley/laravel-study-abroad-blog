@@ -11,5 +11,6 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 600px;
+    height: 300px;
+    width: 300px;
 }
