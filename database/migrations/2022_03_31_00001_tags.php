@@ -27,6 +27,6 @@ class Tags extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tags');
     }
 }

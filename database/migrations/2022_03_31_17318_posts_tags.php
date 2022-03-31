@@ -15,9 +15,9 @@ class PostsTags extends Migration
     {
         Schema::create('posts_tags', function (Blueprint $table){
             $table->increments('post_tag_id');
-            $table->unsignedBigInteger('post_id');
+            $table->unsignedInteger('post_id');
             $table->foreign('post_id')->references('id')->on('posts');
-            $table->unsignedBigInteger('tag_id');
+            $table->unsignedInteger('tag_id');
             $table->foreign('tag_id')->references('tag_id')->on('tags');
         });
     }
@@ -29,6 +29,7 @@ class PostsTags extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('posts_tags');
+
     }
 }
