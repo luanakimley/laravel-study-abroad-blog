@@ -1,13 +1,12 @@
 module.exports = {
-  purge: [
-    './resources/views/**/*.blade.php',
-    './resources/css/**/*.css',
-  ],
-  theme: {
-    extend: {}
-  },
-  variants: {},
-  plugins: [
-    require('@tailwindcss/ui'),
-  ]
-}
+    future: {
+        // removeDeprecatedGapUtilities: true,
+        // purgeLayersByDefault: true,
+    },
+    purge: ["./resources/views/**/*.blade.php", "./resources/css/**/*.css"],
+    theme: {
+        extend: {},
+    },
+    variants: {},
+    plugins: [],
+};

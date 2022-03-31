@@ -1,16 +1,13 @@
-@import "tailwindcss/base";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
-
-.background-image 
-{
-    background-image: url('https://cdn.pixabay.com/photo/2017/07/31/23/45/pen-2562078_960_720.jpg');
+.background-image {
+    background-image: url("https://cdn.discordapp.com/attachments/942955993044746243/959073322421866596/voo-qqq-RSYBi_1fhfM-unsplash.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 300px;
-    width: 300px;
+    height: 550px;
+    width: 100%;
 }
