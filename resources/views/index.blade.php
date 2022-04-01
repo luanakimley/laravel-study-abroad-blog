@@ -1,67 +1,67 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="background-image grid grid-cols-1 m-auto">
+    <div class="background-image grid grid-cols-1 m-auto" >
         <div class="flex text-gray-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
                 <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
-                    Do you want to become a developer?
+                    Are you planning to study abroad?
                 </h1>
                 <a 
                     href="/blog"
-                    class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
+                    class="text-center bg-gray-700 hover:bg-gray-800 px-5 py-3 font-bold text-xl uppercase rounded-lg">
                     Read More
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
-        <div>
-            <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" width="700" alt="">
-        </div>
+    <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-16 border-b border-gray-200">
 
-        <div class="m-auto sm:m-auto text-left w-4/5 block">
-            <h2 class="text-3xl font-extrabold text-gray-600">
-                Struggling to be a better web developer?
-            </h2>
-            
-            <p class="py-8 text-gray-500 text-s">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
-            </p>
+        @foreach ($posts as $post)
+            @if ($post->lead_story == 1)
+            <div>
+                <img src="{{ asset('images/' . $post->image_path) }}" alt="">
+            </div>
+            <div class="m-auto sm:m-auto text-left w-4/5 block">
+                <h2 class="text-3xl font-extrabold text-gray-600">
+                    {{ $post->title }}
+                </h2>
+                
+                <p class="py-8 text-gray-500 text-s mb-5">
+                    {{ $post->description }}
+                </p>
 
-            <p class="font-extrabold text-gray-600 text-s pb-9">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam vero nostrum! Perferendis eos molestias porro vero. Vel alias.
-            </p>
-
-            <a 
-                href="/blog"
-                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
-                Find Out More
-            </a>
-        </div>
+                <a 
+                    href="/blog/{{ $post->slug }}"
+                    class="uppercase bg-sky-500 hover:bg-sky-600 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+                    Find Out More
+                </a>
+            </div>
+            @endif
+        @endforeach
     </div>
 
-    <div class="text-center p-15 bg-black text-white">
+    <div class="text-center p-10 bg-black text-white">
         <h2 class="text-2xl pb-5 text-l"> 
-            I'm an expert in...
+            What you can find...
         </h2>
 
         <span class="font-extrabold block text-4xl py-1">
-            Ux Design
+            Preparation Tips
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Project Management
+            Where to Go
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Digital Strategy
+            What is Erasmus
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Backend Development
+            Student Experiences
         </span>
     </div>
 
-    <div class="text-center py-15">
+    <div class="text-center py-14">
         <span class="uppercase text-s text-gray-400">
             Blog
         </span>
@@ -69,32 +69,28 @@
         <h2 class="text-4xl font-bold py-10">
             Recent Posts
         </h2>
-
-        <p class="m-auto w-4/5 text-gray-500">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque exercitationem saepe enim veritatis, eos temporibus quaerat facere consectetur qui.
-        </p>
     </div>
+    <div class="sm:grid grid-cols-3 gap-16 w-4/5 mx-auto pb-10">
+        @foreach ($posts->slice(0,3) as $post)
+            <div class="bg-yellow-600 text-white pt-10">
+                <div class="m-auto pt-4 pb-16 w-4/5 block">
+                    <span class="uppercase text-xs">
+                        PHP
+                    </span>
 
-    <div class="sm:grid grid-cols-2 w-4/5 m-auto">
-        <div class="flex bg-yellow-700 text-gray-100 pt-10">
-            <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
-                <span class="uppercase text-xs">
-                    PHP
-                </span>
+                    <h3 class="text-xl font-bold py-10">
+                        {{ $post->title }}
+                    </h3>
 
-                <h3 class="text-xl font-bold py-10">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas necessitatibus dolorum error culpa laboriosam. Enim voluptas earum repudiandae consequuntur ad? Expedita labore aspernatur facilis quasi ex? Nemo hic placeat et?
-                </h3>
-
-                <a 
-                    href=""
-                    class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
-                    Find Out More
-                </a>
+                    <a 
+                        href="/blog/{{ $post->slug }}"
+                        class="uppercase bg-transparent border-2 border-gray-100 hover:bg-gray-50 hover:text-yellow-600 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
+                        Find Out More
+                    </a>
+                </div>
             </div>
-        </div>
-        <div>
-            <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" alt="">
-        </div>
+     
+        @endforeach
     </div>
+
 @endsection
