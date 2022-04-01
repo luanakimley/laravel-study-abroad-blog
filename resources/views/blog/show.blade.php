@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="w-4/5 m-auto text-left">
-    <div class="py-15">
+    <div class="py-16">
         <h1 class="text-6xl">
             {{ $post->title }}
         </h1>
