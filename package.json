@@ -19,5 +19,8 @@
         "postcss": "^8.4.12",
         "tailwindcss": "^3.0.23",
         "vue-template-compiler": "^2.6.11"
+    },
+    "dependencies": {
+        "bootstrap-icons": "^1.8.1"
     }
 }
