@@ -71,6 +71,11 @@
                     </div>
 
                     <div class="flex flex-wrap">
+                    {!! NoCaptcha::renderJs() !!}
+                    {!! NoCaptcha::display() !!}
+                    </div>
+
+                    <div class="flex flex-wrap">
                         <button type="submit"
                             class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-sky-500 hover:bg-sky-600 sm:py-4">
                             {{ __('Register') }}
