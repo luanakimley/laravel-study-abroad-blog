@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
 .background-image {
     background-image: url("https://cdn.discordapp.com/attachments/942955993044746243/959073322421866596/voo-qqq-RSYBi_1fhfM-unsplash.jpg");
