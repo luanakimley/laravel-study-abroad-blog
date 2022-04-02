@@ -15,7 +15,7 @@
     </span>
 
     <p class="text-xl text-gray-700 pt-8 pb-10 leading-8 font-light">
-        {{ $post->description }}
+        {!! $post->description !!}
     </p>
 </div>
 

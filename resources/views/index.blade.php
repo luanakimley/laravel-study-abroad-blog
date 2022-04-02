@@ -29,7 +29,7 @@
                 </h2>
                 
                 <p class="py-8 text-gray-500 text-s mb-5">
-                    {{ $post->description }}
+                    {!! $post->description !!}
                 </p>
 
                 <a 
