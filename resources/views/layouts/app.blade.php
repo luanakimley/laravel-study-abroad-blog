@@ -55,5 +55,7 @@
             @include('layouts.footer')
         </div>
     </div>
+    <script src="https://cdn.ckeditor.com/ckeditor5/33.0.0/classic/ckeditor.js"></script>
+@yield('scripts')
 </body>
 </html>

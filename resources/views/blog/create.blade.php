@@ -27,7 +27,8 @@
         <textarea 
             name="description"
             placeholder="Description..."
-            class="py-40 bg-transparent mt-4 block border-0 border-gray-20 border-b-2 w-full h-20 text-xl focus:ring-0 focus:border-black"></textarea>
+            class="py-40 bg-transparent mt-4 block border-0 border-gray-20 border-b-2 w-full h-20 text-xl focus:ring-0 focus:border-black" id="editor"></textarea>
+
 
         <div class="bg-grey-lighter pt-16">
             <label class="w-44 flex flex-col items-center px-2 py-3 bg-white hover:bg-gray-50 rounded-lg shadow-md tracking-wide uppercase border-2 border-blue-100 cursor-pointer">
@@ -75,4 +76,14 @@
     </form>
 </div>
 
+@endsection
+
+@section('scripts')
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 @endsection
