@@ -26,7 +26,7 @@
         <textarea 
             name="description"
             placeholder="Description..."
-            class="py-40 bg-transparent mt-4 block border-0 border-gray-20 border-b-2 w-full h-20 text-xl focus:ring-0 focus:border-black">{{ $post->description }}</textarea> 
+            class="py-40 bg-transparent mt-4 block border-0 border-gray-20 border-b-2 w-full h-20 text-xl focus:ring-0 focus:border-black" id="editor">{{ $post->description }}</textarea> 
 
         <div class="py-20">
             <label class="w-4/5 text-xl block">Is this a lead story?</label>
@@ -65,4 +65,13 @@
     </form>
 </div>
 
+@endsection
+@section('scripts')
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 @endsection
