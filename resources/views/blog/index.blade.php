@@ -49,6 +49,7 @@
                 Keep Reading
             </a>
 
+           
             @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
                 <span class="float-right">
                     <a 
