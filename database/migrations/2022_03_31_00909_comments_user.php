@@ -17,7 +17,7 @@ class CommentsUser extends Migration
             $table->increments('comment_user_id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('comment_id');
+            $table->unsignedInteger('comment_id');
             $table->foreign('comment_id')->references('comment_id')->on('comments');
         });
     }
