@@ -58,6 +58,57 @@ class LoginController extends Controller
         return redirect()->route('index');
     }
 
+    // Github login
+    public function redirectToGithub()
+    {
+        return Socialite::driver('github')->redirect();
+    }
+
+    // Github callback
+    public function handleGithubCallback()
+    {
+        $user = Socialite::driver('github')->stateless()->user();
+
+        $this->_registerOrLoginUser($user);
+
+        // Return home after login
+        return redirect()->route('index');
+    }
+
+    // Twitter login
+    public function redirectToTwitter()
+    {
+        return Socialite::driver('twitter-oauth-2')->redirect();
+    }
+
+    // Twitter callback
+    public function handleTwitterCallback()
+    {
+        $user = Socialite::driver('twitter-oauth-2')->user();
+
+        $this->_registerOrLoginUser($user);
+
+        // Return home after login
+        return redirect()->route('index');
+    }
+
+    // Linkedin login
+    public function redirectToLinkedin()
+    {
+        return Socialite::driver('linkedin')->redirect();
+    }
+
+    // Linkedin callback
+    public function handleLinkedinCallback()
+    {
+        $user = Socialite::driver('linkedin')->user();
+
+        $this->_registerOrLoginUser($user);
+
+        // Return home after login
+        return redirect()->route('index');
+    }
+
     protected function _registerOrLoginUser($data)
     {
         $user = User::where('email', '=', $data->email)->first();
@@ -71,4 +122,6 @@ class LoginController extends Controller
 
         Auth::login($user);
     }
+
+
 }
