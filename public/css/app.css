@@ -2531,6 +2531,12 @@ select {
 .h-20 {
   height: 5rem;
 }
+.h-auto {
+  height: auto;
+}
+.h-80 {
+  height: 20rem;
+}
 .h-screen {
   height: 100vh;
 }
@@ -2548,6 +2554,9 @@ select {
 }
 .w-2\/6 {
   width: 33.333333%;
+}
+.w-auto {
+  width: auto;
 }
 .cursor-pointer {
   cursor: pointer;
