@@ -2477,6 +2477,9 @@ select {
 .mb-5 {
   margin-bottom: 1.25rem;
 }
+.mt-5 {
+  margin-top: 1.25rem;
+}
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -2756,10 +2759,6 @@ select {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -2820,11 +2819,11 @@ select {
 .pb-14 {
   padding-bottom: 3.5rem;
 }
-.pb-5 {
-  padding-bottom: 1.25rem;
-}
 .pb-10 {
   padding-bottom: 2.5rem;
+}
+.pb-5 {
+  padding-bottom: 1.25rem;
 }
 .pt-16 {
   padding-top: 4rem;
@@ -2838,14 +2837,14 @@ select {
 .pb-4 {
   padding-bottom: 1rem;
 }
-.pt-8 {
-  padding-top: 2rem;
-}
 .pb-1 {
   padding-bottom: 0.25rem;
 }
 .pr-3 {
   padding-right: 0.75rem;
+}
+.pt-8 {
+  padding-top: 2rem;
 }
 .pb-3 {
   padding-bottom: 0.75rem;

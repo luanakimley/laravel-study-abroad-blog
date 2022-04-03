@@ -41,9 +41,11 @@
                 By <span class="font-bold italic text-gray-800">{{ $post->user->name }}</span>, Created on {{ date('jS M Y', strtotime($post->updated_at)) }}
             </span>
 
-            <p class="text-xl text-gray-700 pt-8 pb-10 leading-8 font-light">
+            <p class="text-xl text-gray-700 pb-10 leading-8 font-light">
                 {!! substr($post->description, 0, 200) !!}...
             </p>
+
+            <br><br>
 
             <a href="/blog/{{ $post->slug }}" class="uppercase bg-sky-500 hover:bg-sky-600 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
                 Keep Reading

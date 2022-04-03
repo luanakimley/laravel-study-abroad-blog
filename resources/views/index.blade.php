@@ -28,9 +28,9 @@
                     {{ $post->title }}
                 </h2>
                 
-                <p class="py-8 text-gray-500 text-s mb-5">
+                <div class="pb-10 text-gray-500 text-s mb-5 mt-5">
                     {!! substr($post->description, 0, 200) !!}...
-                </p>
+                </div>
 
                 <a 
                     href="/blog/{{ $post->slug }}"

@@ -15,7 +15,7 @@
 
                     <div class="flex flex-wrap">
                         <a href="{{ route('login.google') }}" class="block w-full bg-red-500 text-white text-center rounded-lg p-3 my-2 font-bold"><i class="bi bi-google mr-3"></i>Login with Google</a>
-                        <a href="" class="block w-full bg-sky-600 text-white text-center rounded-lg p-3 my-2 font-bold"><i class="bi bi-linkedin mr-3"></i>Login with LinkedIn</a>
+                        <a href="{{ route('login.linkedin') }}" class="block w-full bg-sky-600 text-white text-center rounded-lg p-3 my-2 font-bold"><i class="bi bi-linkedin mr-3"></i>Login with LinkedIn</a>
                         <a href="{{ route('login.twitter') }}" class="block w-full bg-sky-400 text-white text-center rounded-lg p-3 my-2 font-bold"><i class="bi bi-twitter mr-3"></i>Login with Twitter</a>
                         <a href="{{ route('login.github') }}" class="block w-full bg-zinc-900 text-white text-center rounded-lg p-3 my-2 font-bold"><i class="bi bi-github mr-3"></i>Login with GitHub</a>
                         <p class="text-lg block w-full text-center my-3">or</p>
