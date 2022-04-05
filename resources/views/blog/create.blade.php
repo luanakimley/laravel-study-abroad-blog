@@ -74,16 +74,15 @@
             Submit Post
         </button>
     </form>
+
+    <h1>Hello</h1>
 </div>
 
 @endsection
 
 @section('scripts')
+
 <script>
-    ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
+    CKEDITOR.replace( 'editor' );
 </script>
 @endsection
