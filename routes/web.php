@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\TagsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,8 @@ use App\Http\Controllers\PostsController;
 Route::get('/', [PagesController::class, 'index'])->name('index');
 
 Route::resource('/blog', PostsController::class);
+
+Route::resource('/tags', TagsController::class);
 
 Auth::routes();
 
