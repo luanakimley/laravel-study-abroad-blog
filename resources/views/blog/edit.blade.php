@@ -65,15 +65,12 @@
     </form>
 </div>
 
+<script src="https://cdn.ckeditor.com/ckeditor5/33.0.0/classic/ckeditor.js"></script>
+@yield('scripts')
+
 @endsection
 @section('scripts')
-
 <script>
-    ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-    
+    CKEDITOR.replace( 'editor' );
 </script>
 @endsection
