@@ -74,16 +74,21 @@
             Submit Post
         </button>
     </form>
+
+    <h1>Hello</h1>
 </div>
 
 @endsection
 
 @section('scripts')
+
 <script>
+    var ClassicEditor = require('@ckeditor/ckeditor5-build-classic');
     ClassicEditor
         .create( document.querySelector( '#editor' ) )
         .catch( error => {
             console.error( error );
         } );
+   
 </script>
 @endsection

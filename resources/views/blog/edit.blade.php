@@ -67,11 +67,13 @@
 
 @endsection
 @section('scripts')
+
 <script>
     ClassicEditor
         .create( document.querySelector( '#editor' ) )
         .catch( error => {
             console.error( error );
         } );
+    
 </script>
 @endsection
