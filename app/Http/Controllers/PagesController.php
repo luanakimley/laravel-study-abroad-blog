@@ -11,4 +11,5 @@ class PagesController extends Controller
     {
         return view('index')->with('posts', Post::orderBy('updated_at', 'DESC')->get());
     }
+    
 }

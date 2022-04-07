@@ -15,8 +15,7 @@ class SocialShareController extends Controller
     public function index()
     {
         $shareButtons = \Share::page(
-            'https://www.itsolutionstuff.com',
-            'Your share text comes here',
+            'https://makitweb.com/how-to-upload-multiple-files-with-vue-js-and-php/'
         )
         ->facebook()
         ->twitter()

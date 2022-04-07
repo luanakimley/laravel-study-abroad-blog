@@ -80,8 +80,7 @@
 @endsection
 
 @section('scripts')
-
 <script>
-    CKEDITOR.replace( 'editor' );
+    CKEDITOR.replace( 'editor' );  
 </script>
 @endsection
