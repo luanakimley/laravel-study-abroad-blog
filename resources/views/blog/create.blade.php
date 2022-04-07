@@ -75,14 +75,12 @@
         </button>
     </form>
 
-    <h1>Hello</h1>
 </div>
 
 @endsection
 
 @section('scripts')
-
 <script>
-    CKEDITOR.replace( 'editor' );
+    CKEDITOR.replace( 'editor' );  
 </script>
 @endsection
