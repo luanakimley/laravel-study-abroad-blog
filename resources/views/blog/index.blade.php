@@ -21,7 +21,7 @@
     <div class="pt-16 w-4/5 m-auto">
         <a 
             href="/blog/create"
-            class="bg-sky-500 hover:bg-sky-600 uppercase text-gray-50 text-xs font-extrabold py-3 px-5 rounded-3xl ">
+            class="hover:bg-sky-500 border-2 bg-transparent border-sky-500 text-sky-500 uppercase hover:text-gray-50 text-xs font-extrabold py-3 px-5 rounded-3xl ">
             Create post
         </a>
     </div>
