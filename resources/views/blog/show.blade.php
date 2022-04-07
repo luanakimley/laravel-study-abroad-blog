@@ -24,6 +24,8 @@
     <br><br>
        {!! Share::page("http://127.0.0.1:8000/blog/{$post->title}")->facebook()->twitter()->whatsapp()->telegram()->reddit() !!}            
     </div>
+    
+
 
     <div>
         <br>
@@ -37,7 +39,7 @@
     
     var disqus_config = function () {
     this.page.url = '{{ Request::url() }}';  
-    this.page.identifier = '{{$post->id}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.identifier = {{$post->id}}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     
     (function() { // DON'T EDIT BELOW THIS LINE
