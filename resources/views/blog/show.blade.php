@@ -23,7 +23,9 @@
     </p>
     <br><br>
 
+
        {!! Share::page($post->url, $post->title)->facebook()->twitter()->whatsapp() !!}
+
                                
 
 </div>

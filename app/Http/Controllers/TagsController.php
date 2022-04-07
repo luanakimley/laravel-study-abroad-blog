@@ -18,16 +18,6 @@ class TagsController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -35,7 +25,16 @@ class TagsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required'
+        ]);
+
+        Tags::create([
+            'title' => $request->input('title'),
+        ]);
+
+        return redirect('/tags')
+            ->with('message', 'Your tag has been added!');
     }
 
     /**
@@ -57,7 +56,8 @@ class TagsController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('tags.edit')
+            ->with('tag', Tags::where('tag_id', $id)->first());
     }
 
     /**
@@ -69,7 +69,18 @@ class TagsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+        ]);
+
+        Tags::where('tag_id', $id)
+            ->update([
+                'title' => $request->input('title'),
+                
+            ]);
+
+        return redirect('/tags')
+            ->with('message', 'Your tag has been updated!');
     }
 
     /**
@@ -80,6 +91,10 @@ class TagsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tag = Tags::where('tag_id', $id);
+        $tag->delete();
+
+        return redirect('/tags')
+            ->with('message', 'Your tag has been deleted!');
     }
 }
