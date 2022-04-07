@@ -22,7 +22,7 @@
         {!! $post->description !!}
     </p>
     <br><br>
-       {!! Share::page("http://127.0.0.1:8000/blog/{$post->title}")->facebook()->twitter()->whatsapp()->telegram()->reddit() !!}            
+       {!! Share::page("http://127.0.0.1:8000/blog/{$post->slug}")->facebook()->twitter()->whatsapp()->telegram()->reddit() !!}            
     </div>
     
 

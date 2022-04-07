@@ -9,7 +9,7 @@
     </div>
     <form action="/tags" method="POST" enctype="multipart/form-data">
     @csrf
-        <input name="title" type="text" class="rounded-lg border-gray-300 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 my-6 mr-0">
+        <input name="name" type="text" class="rounded-lg border-gray-300 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 my-6 mr-0">
         <button type="submit" class="rounded-lg bg-sky-500 text-xs uppercase font-bold p-3 text-white ml-0 hover:bg-sky-600">Add tag</button>
     </form>
     @if (session()->has('message'))
@@ -32,7 +32,7 @@
             #
         </th>
         <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-            Tag title
+            Tag name
         </th>
         <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-right">
         </th>
@@ -44,14 +44,14 @@
 
             @if ($loop->odd)
             <tr class="bg-gray-100 border-b">
-                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ $tag->tag_id }}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ $tag->id }}</td>
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    {{ $tag->title }} 
+                    {{ $tag->name }} 
                 </td>
                 <td class="text-sm text-gray-900 font-light py-4 text-center">
                 <span>
-                    <a href="/tags/{{ $tag->tag_id }}/edit" class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">Edit<i class= "ml-2 bi bi-pencil-square"></i></a>
-                    <form class="inline-block" action="/tags/{{ $tag->tag_id }}" method="POST" >
+                    <a href="/tags/{{ $tag->id }}/edit" class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">Edit<i class= "ml-2 bi bi-pencil-square"></i></a>
+                    <form class="inline-block" action="/tags/{{ $tag->id }}" method="POST" >
                             @csrf
                             @method('delete')
                         <button type="submit" class="text-red-500 font-light ml-8">Delete</button>
@@ -62,14 +62,14 @@
             </tr>
             @elseif ($loop->even)
             <tr class="bg-white border-b">
-                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ $tag->tag_id }}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ $tag->id }}</td>
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap" >
-                    {{ $tag->title }} 
+                    {{ $tag->name }} 
                 </td>
                 <td class="text-sm text-gray-900 font-light py-4 text-center">
                     <span>
-                        <a href="/tags/{{ $tag->tag_id }}/edit" class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2 ">Edit<i class= "ml-2 bi bi-pencil-square"></i></a>
-                        <form class="inline-block" action="/tags/{{ $tag->tag_id }}" method="POST" >
+                        <a href="/tags/{{ $tag->id }}/edit" class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2 ">Edit<i class= "ml-2 bi bi-pencil-square"></i></a>
+                        <form class="inline-block" action="/tags/{{ $tag->id }}" method="POST" >
                                 @csrf
                                 @method('delete')
                             <button type="submit" class="text-red-500 font-light ml-8">Delete</button>

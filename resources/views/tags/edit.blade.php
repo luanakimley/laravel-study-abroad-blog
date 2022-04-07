@@ -28,7 +28,7 @@
             #
         </th>
         <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-            Tag title
+            Tag name
         </th>
         <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-right">
         </th>
@@ -37,14 +37,14 @@
 
     <tbody>  
         <tr class="bg-gray-100 border-b">
-            <form action="/tags/{{ $tag->tag_id }}"
+            <form action="/tags/{{ $tag->id }}"
                 method="POST"
                 enctype="multipart/form-data">
                 @csrf
                 @method('PUT')>
-            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ $tag->tag_id }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ $tag->id }}</td>
             <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                <input name="title" value="{{ $tag->title }}" class="p-2 rounded-lg border-gray-300 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                <input name="name" value="{{ $tag->name }}" class="p-2 rounded-lg border-gray-300 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
                 
             </td>
             <td class="text-sm text-gray-900 font-light py-4 text-center">

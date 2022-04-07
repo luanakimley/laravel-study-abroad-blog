@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Tags;
+use Spatie\Tags\Tag;
 
 class TagsController extends Controller
 {
@@ -14,7 +14,7 @@ class TagsController extends Controller
      */
     public function index()
     {
-        return view('tags.index')->with('tags', Tags::orderBy('tag_id', 'ASC')->get());
+        return view('tags.index')->with('tags', Tag::orderBy('id', 'ASC')->get());
     }
 
     /**
@@ -26,11 +26,11 @@ class TagsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required'
+            'name' => 'required'
         ]);
 
-        Tags::create([
-            'title' => $request->input('title'),
+        Tag::create([
+            'name' => $request->input('name'),
         ]);
 
         return redirect('/tags')
@@ -57,7 +57,7 @@ class TagsController extends Controller
     public function edit($id)
     {
         return view('tags.edit')
-            ->with('tag', Tags::where('tag_id', $id)->first());
+            ->with('tag', Tag::where('id', $id)->first());
     }
 
     /**
@@ -70,14 +70,12 @@ class TagsController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'title' => 'required',
+            'name' => 'required',
         ]);
 
-        Tags::where('tag_id', $id)
-            ->update([
-                'title' => $request->input('title'),
-                
-            ]);
+        $tag = Tag::find($id);
+        $tag->name = $request->input('name');
+        $tag->save();
 
         return redirect('/tags')
             ->with('message', 'Your tag has been updated!');
@@ -91,7 +89,7 @@ class TagsController extends Controller
      */
     public function destroy($id)
     {
-        $tag = Tags::where('tag_id', $id);
+        $tag = Tag::where('id', $id);
         $tag->delete();
 
         return redirect('/tags')
