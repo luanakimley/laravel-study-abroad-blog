@@ -3,10 +3,15 @@
 @section('content')
 <div class="w-4/5 m-auto text-left">
     <div class="py-16">
-        <h1 class="text-5xl uppercase font-bold">
+        @foreach ( $post->tags()->get() as $tag) 
+            <span class="mr-3 bg-transparent text-sky-500 border border-sky-500 rounded-full text-xs p-1 px-2 font-bold capitalize"><i class="bi bi-tag-fill mr-1"></i>{{ $tag->name }}</span>
+        @endforeach
+        <h1 class="text-5xl uppercase font-bold pt-10">
             {{ $post->title }}
         </h1>
+        
     </div>
+    
 </div>
 
 <img class="m-auto h-80" src="{{ asset('images/' . $post->image_path) }}" alt="">

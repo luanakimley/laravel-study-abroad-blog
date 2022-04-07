@@ -56,8 +56,20 @@
             </div>
         </div>
 
+        <div class="py-5 mb-5">
+            <label class="w-4/5 text-xl block pb-7">Choose related tags</label>
+           
+                @foreach ($tags as $tag)
+                <span class="m-3">
+                    <input class="rounded" type="checkbox" name="tags[]" value= {{ $tag->name }} id={{ $tag->name }}>
+                    <label class="ml-2" for={{ $tag->name }}>{{ $tag->name }}</label>
+                </span>
+                @endforeach
+
+        </div>
+
         @if ($errors->any())
-            <div class="m-auto text-center mb-5">
+            <div class="m-auto text-center mb-5 mt-3">
                 <ul class="flex">
                     @foreach ($errors->all() as $error)
                         <li class="w-1/5 mb-4 mr-4 text-gray-50 bg-red-700 rounded-2xl py-4 px-2">

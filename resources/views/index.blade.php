@@ -24,7 +24,10 @@
                 <img src="{{ asset('images/' . $post->image_path) }}" alt="">
             </div>
             <div class="m-auto sm:m-auto text-left w-4/5 block">
-                <h2 class="text-3xl font-extrabold text-gray-600">
+                @foreach ( $post->tags()->get() as $tag) 
+                    <span class="mr-3 bg-gray-600 text-white rounded-full text-xs p-1 px-2 font-bold capitalize"><i class="bi bi-tag-fill mr-1"></i>{{ $tag->name }}</span>
+                @endforeach
+                <h2 class="text-3xl font-extrabold text-gray-600 pt-10">
                     {{ $post->title }}
                 </h2>
                 
@@ -74,9 +77,21 @@
         @foreach ($posts->slice(0,3) as $post)
             <div class="bg-yellow-600 text-white pt-10">
                 <div class="m-auto pt-4 pb-16 w-4/5 block">
-                    <span class="uppercase text-xs">
-                        PHP
-                    </span>
+                    @foreach ( $post->tags()->get() as $tag) 
+                    
+                        @if($loop->last)
+                        <span class="uppercase text-xs px-1">
+                            {{ $tag->name }}
+                        </span>
+                        @else
+                        <span class="uppercase text-xs px-1">
+                            {{ $tag->name }}&nbsp;&nbsp;&nbsp;| 
+                        </span>
+                        @endif
+                        
+                    @endforeach
+
+                    <img class="mt-10" src="{{ asset('images/' . $post->image_path) }}" alt="">
 
                     <h3 class="text-xl font-bold py-10">
                         {{ $post->title }}

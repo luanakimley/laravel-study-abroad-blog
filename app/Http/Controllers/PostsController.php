@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Spatie\Tags\HasTags;
+use Spatie\Tags\Tag;
+
 
 class PostsController extends Controller
 {
@@ -32,7 +34,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('blog.create');
+        return view('blog.create')->with('tags', Tag::orderBy('name', 'ASC')->get());
     }
 
     /**
@@ -46,12 +48,14 @@ class PostsController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'image' => 'required|mimes:jpg,png,jpeg|max:5048'
+            'image' => 'required|mimes:jpg,png,jpeg|max:5048',
+            'tags' =>'required'
         ]);
 
-        $newImageName = uniqid() . '-' . $request->title . '.' . $request->image->extension();
+        $newImageName = uniqid() . '-' . SlugService::createSlug(Post::class, 'slug', $request->title) . '.' . $request->image->extension();
 
         $request->image->move(public_path('images'), $newImageName);
+        
 
         Post::create([
             'title' => $request->input('title'),
@@ -60,7 +64,8 @@ class PostsController extends Controller
             'image_path' => $newImageName,
             'user_id' => auth()->user()->id,
             'lead_story' => $request->input('leadStory')
-        ]);
+        ])->attachTags($request->input('tags'));
+
 
         return redirect('/blog')
             ->with('message', 'Your post has been added!');
@@ -126,6 +131,7 @@ class PostsController extends Controller
     public function destroy($slug)
     {
         $post = Post::where('slug', $slug);
+
         $post->delete();
 
         return redirect('/blog')

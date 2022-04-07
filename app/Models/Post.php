@@ -19,6 +19,11 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function tag()
+    {
+        return $this->belongsTo(Tag::class);
+    }
+
     public function sluggable(): array
     {
         return [

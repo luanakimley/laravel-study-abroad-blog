@@ -33,7 +33,10 @@
             <img class="h-auto m-auto w-auto" src="{{ asset('images/' . $post->image_path) }}" alt="">
         </div>
         <div>
-            <h2 class="text-gray-700 font-bold text-5xl pb-4">
+            @foreach ( $post->tags()->get() as $tag) 
+                <span class="mr-3 bg-gray-600 text-white rounded-full text-xs p-1 px-2 font-bold capitalize"><i class="bi bi-tag-fill mr-1"></i>{{ $tag->name }}</span>
+            @endforeach
+            <h2 class="text-gray-700 font-bold text-5xl pb-4 pt-10">
                 {{ $post->title }}
             </h2>
 
