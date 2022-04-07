@@ -42,7 +42,7 @@
             </span>
 
             <p class="text-xl text-gray-700 pb-10 leading-8 font-light">
-                {!! substr($post->description, 0, 200) !!}...
+                {!!  substr($post->description, 0, 200)  !!}...
             </p>
 
             <br><br>
@@ -73,7 +73,6 @@
                             type="submit">
                             Delete
                         </button>
-
                     </form>
                 </span>
             @endif
