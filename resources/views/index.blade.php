@@ -89,6 +89,7 @@
                         </span>
                         @endif
                         
+                        
                     @endforeach
 
                     <img class="mt-10" src="{{ asset('images/' . $post->image_path) }}" alt="">

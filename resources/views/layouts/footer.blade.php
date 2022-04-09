@@ -1,93 +1,28 @@
-<footer class="bg-gray-800 py-20 mt-20">
-    <div class="sm:grid grid-cols-3 w-4/5 pb-10 m-auto border-b-2 border-gray-700">
-        <div>
-            <h3 class="text-l sm:font-bold text-gray-100">
-                Pages
-            </h3>
-
-            <ul class="py-4 sm:text-s pt-4 text-gray-400">
-                <li class="pb-1">
-                    <a href="/">
-                        Home
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/blog">
-                        Blog
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/login">
-                        Login
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/register">
-                        Register
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div>
-            <h3 class="text-l sm:font-bold text-gray-100">
-                Find Us
-            </h3>
-
-            <ul class="py-4 sm:text-s pt-4 text-gray-400">
-                <li class="pb-1">
-                    <a href="/">
-                        What we do
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Address
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Phone
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div>
-            <h3 class="text-l sm:font-bold text-gray-100">
-                Latest posts
-            </h3>
-
-            <ul class="py-4 sm:text-s pt-4 text-gray-400">
-                <li class="pb-1">
-                    <a href="/">
-                        Why we love tech
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why we love design
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why to use Laravel
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why PHP is the best
-                    </a>
-                </li>
-            </ul>
-        </div>
+<br>
+<footer class="text-center text-white" style="background-color: #0a4275;">
+    <div class="container p-6">
+       
+      <div class="">
+        <img
+            src="https://media.discordapp.net/attachments/902133591272730654/961667287419617351/Explore_new_opportunities.png" class="max-w-full h-20 rounded-full" alt="">
+        <p class="flex justify-center items-center">
+          <p class="font-mono">Our Blogs inspire you to achieve your Dreams!</p>
+            <br>
+          
+          <span class="mr-4">Register for free</span>
+          <button type="button" class="inline-block px-6 py-2 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">
+            
+            @if (Route::has('register'))
+                <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
+            @endif
+        
+          </button>
+          <br>
+        </p>
+      </div>
     </div>
-    <p class="w-25 w-4/5 pb-3 m-auto text-xs text-gray-100 pt-6">
-        Copyright 2017-2021 Code With Dary. All Rights Reserved
-    </p>
-</footer>
+  
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright: Luana & Siya
+    </div>
+  </footer>

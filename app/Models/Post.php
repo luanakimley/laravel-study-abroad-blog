@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
-use Spatie\Tags\HasTags;
+//use Spatie\Tags\HasTags;
 
 class Post extends Model
 {
-    use HasFactory, HasTags;
+    //use HasFactory, HasTags;
     use Sluggable;
 
     protected $fillable = ['title', 'slug', 'description', 'bookmarked', 'image_path', 'user_id', 'lead_story'];
