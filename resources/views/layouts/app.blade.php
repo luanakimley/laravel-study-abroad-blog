@@ -45,8 +45,10 @@
                         @endif
                     @else
                         <a class="no-underline hover:underline" href="/tags">Manage Tags</a>
-                        <span>{{ Auth::user()->name }}</span>
-
+                        <a class="no-underline hover:underline" href="/bookmarks">Bookmarks</a>
+                        
+                        <span class="font-bold">{{ Auth::user()->name }}</span>
+            
                         <a href="{{ route('logout') }}"
                            class="no-underline hover:underline"
                            onclick="event.preventDefault();
@@ -54,6 +56,7 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                             {{ csrf_field() }}
                         </form>
+                        
                     @endguest
                 </nav>
             </div>

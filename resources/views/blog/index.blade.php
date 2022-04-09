@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+
+<script>
+    function bookmark()
+    {
+        
+    }
+</script>
+
 <div class="w-4/5 m-auto text-center">
     <div class="py-16 border-b border-gray-200">
         <h1 class="text-5xl uppercase font-bold">
@@ -50,9 +58,27 @@
 
             <br><br>
 
-            <a href="/blog/{{ $post->slug }}" class="uppercase bg-sky-500 hover:bg-sky-600 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
-                Keep Reading
-            </a>
+            <div>
+
+                <a href="/blog/{{ $post->slug }}" class="uppercase bg-sky-500 hover:bg-sky-600 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+                    Keep Reading
+                </a>
+                @if (Auth::check())
+                    @if(Auth::user()->isBookmarked($post))
+                        <form class="inline-block" method="post" action="{{ url('blog/bookmark', ['slug' => $post->slug, 'user_id'=>Auth::user()->id] ) }}" 
+                            enctype="multipart/form-data">
+                            @csrf
+                            <button type="submit"><i class="bi bi-bookmark-heart-fill text-2xl ml-4"></i></button>
+                        </form>
+                    @else
+                        <form class="inline-block" method="post" action="{{ url('blog/bookmark', ['slug' => $post->slug, 'user_id'=>Auth::user()->id]) }}" 
+                            enctype="multipart/form-data">
+                            @csrf
+                            <button type="submit"><i class="bi bi-bookmark-heart text-2xl ml-4"></i></button>
+                        </form>
+                    @endif
+                @endif
+            </div>
 
            
             @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
@@ -82,4 +108,6 @@
         </div>
     </div>    
 @endforeach
+
+
 @endsection

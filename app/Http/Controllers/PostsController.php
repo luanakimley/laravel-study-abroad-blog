@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\User;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Spatie\Tags\HasTags;
 use Spatie\Tags\Tag;
@@ -122,6 +123,7 @@ class PostsController extends Controller
             ->with('message', 'Your post has been updated!');
     }
 
+
     /**
      * Remove the specified resource from storage.
      *
@@ -137,5 +139,34 @@ class PostsController extends Controller
         return redirect('/blog')
             ->with('message', 'Your post has been deleted!');
     }
+
+    public function bookmarks()
+    {
+        return view('bookmarks')
+            ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
+    }
+
+    public function bookmark($slug, $user_id)
+    {
+        $object = Post::where('slug', $slug)->first();
+
+        $user = User::where('id', $user_id)->first();
+
+        $user->bookmark($object);
+
+        return redirect('/blog');
+    }
+
+    public function unbookmark($slug, $user_id)
+    {
+        $object = Post::where('slug', $slug)->first();
+
+        $user = User::where('id', $user_id)->first();
+
+        $user->bookmark($object);
+
+        return redirect('/bookmarks');
+    }
+
 }
 

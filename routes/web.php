@@ -22,6 +22,12 @@ Route::resource('/blog', PostsController::class);
 
 Route::resource('/tags', TagsController::class);
 
+Route::post('/blog/bookmark/{slug}/{user_id}', [App\Http\Controllers\PostsController::class, 'bookmark']);
+
+Route::post('/bookmark/{slug}/{user_id}', [App\Http\Controllers\PostsController::class, 'unbookmark']);
+
+Route::get('/bookmarks', [App\Http\Controllers\PostsController::class, 'bookmarks']);
+
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
