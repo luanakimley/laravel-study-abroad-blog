@@ -32,7 +32,8 @@ class PagesController extends Controller
       Mail::to('salekarsiya77@gmail.com')->send (new VisitorContact($data));
 
       Session::flash('message', 'Thank you for your email');
-      return redirect()->route('contact.show');
+      return redirect()->route('contact.show');   
+
     }
      
 }
