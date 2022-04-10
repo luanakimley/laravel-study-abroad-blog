@@ -40,13 +40,14 @@
                     <a class="no-underline hover:underline" href="/blog">Blog</a>
                     @guest
                         <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="no-underline hover:underline" href="/contact-form ">Contact Us</a>
                         @if (Route::has('register'))
                             <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
                         @endif
                     @else
                         <a class="no-underline hover:underline" href="/tags">Manage Tags</a>
                         <a class="no-underline hover:underline" href="/bookmarks">Bookmarks</a>
-                        <a class="no-underline hover:underline" href="/contact-form ">Contact</a>
+                
                         
                         <span class="font-bold">{{ Auth::user()->name }}</span>
             
