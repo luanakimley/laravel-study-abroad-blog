@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\TagsController;
+use App\Http\Controllers\ContactController; 
+
 
 /*
 |--------------------------------------------------------------------------
@@ -50,8 +52,9 @@ Route::get('login/twitter/callback', [App\Http\Controllers\Auth\LoginController:
 Route::get('login/linkedin', [App\Http\Controllers\Auth\LoginController::class, 'redirectToLinkedin'])->name('login.linkedin');
 Route::get('login/linkedin/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleLinkedinCallback']);
 
+Route::get('/contact-form', [App\Http\Controllers\ContactController::class, 'contactForm'])->name('contact-form'); 
 
-Route::get('/contact', [App\Http\Controllers\PagesController::class, 'showContactForm'])->name('contact.show');
-Route::post('/contact', [App\Http\Controllers\PagesController::class, 'submitContactForm'])->name('contact.submit');
+Route::post('/contact-form', [App\Http\Controllers\ContactController::class, 'storeContactForm'])->name('contact-form.store'); 
+
 
   

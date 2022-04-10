@@ -16,24 +16,5 @@ class PagesController extends Controller
         return view('index')->with('posts', Post::orderBy('updated_at', 'DESC')->get());
     }
     
-    public function showContactForm()
-    {
-        return view('email.contact');
-    }
-
-    public function submitContactForm(Request $request)
-    {
-      $data = [
-        'name' => $request->name,
-        'email' =>$request->email,
-        'message' =>$request->message,
-      ];
-
-      Mail::to('salekarsiya77@gmail.com')->send (new VisitorContact($data));
-
-      Session::flash('message', 'Thank you for your email');
-      return redirect()->route('contact.show');   
-
-    }
      
 }
