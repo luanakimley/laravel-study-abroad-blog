@@ -46,6 +46,7 @@
                     @else
                         <a class="no-underline hover:underline" href="/tags">Manage Tags</a>
                         <a class="no-underline hover:underline" href="/bookmarks">Bookmarks</a>
+                        <a class="no-underline hover:underline" href="/contact">Contact</a>
                         
                         <span class="font-bold">{{ Auth::user()->name }}</span>
             

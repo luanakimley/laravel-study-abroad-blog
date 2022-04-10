@@ -51,5 +51,7 @@ Route::get('login/linkedin', [App\Http\Controllers\Auth\LoginController::class, 
 Route::get('login/linkedin/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleLinkedinCallback']);
 
 
+Route::get('/contact', [App\Http\Controllers\PagesController::class, 'showContactForm'])->name('contact.show');
+Route::post('/contact', [App\Http\Controllers\PagesController::class, 'submitContactForm'])->name('contact.submit');
 
-
+  
