@@ -1,5 +1,5 @@
 # Study Abroad
-![alt text](images/logo.png "Logo")
+![alt text](public/images/logo.png "Logo")
 ⋅⋅⋅Browse through a Variety of Helpful Blogs.
 
 ======
