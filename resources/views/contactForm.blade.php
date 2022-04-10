@@ -2,6 +2,7 @@
 @section('content')
 <div class="w-full max-w-xs">
  <br>
+ <br>
     <form method="POST" action="{{ route('contact-form.store') }}" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <br>
         @if(Session::has('success')) 
