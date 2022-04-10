@@ -4,7 +4,7 @@
 
 <head> 
 
-    <title>Laravel 8 Contact Form Example - NiceSnippets.com</title> 
+    <title>Contact - Study Abroad Blogs</title> 
 
     <meta charset="utf-8"> 
 
@@ -14,11 +14,16 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous" /> 
 
-</head> 
+</head>
+
 
 <body> 
 
-    <div class="container"> 
+    <div class="container">
+        <nav class="navbar fixed-top navbar-light bg-dark">
+            <a class="btn btn-light" href="/">Home</a> 
+        </nav>
+       
 
         <div class="row mt-5 mb-5"> 
 
@@ -28,7 +33,7 @@
 
                     <div class="card-header bg-info"> 
 
-                        <h3 class="text-white">Laravel 8 Contact Form Example - NiceSnippets.com</h3> 
+                        <h3 class="text-white">Email Us All Your Queries - Contact Study Abroad now</h3> 
 
                     </div> 
 
@@ -166,7 +171,7 @@
 
                             <div class="form-group text-center"> 
 
-                                <button class="btn btn-success btn-submit">Save</button> 
+                                <button class="btn btn-success btn-submit">Send</button> 
 
                             </div> 
 
@@ -181,6 +186,27 @@
         </div> 
 
     </div> 
+    <br>
+<footer class="text-center text-white" style="background-color: #0a4275;">
+    <div class="container p-6">
+       
+      <div class="">
+
+        <p class="flex justify-center items-center">
+            <br>
+          <p class="font-mono">Our blog will inspire you to achieve your dreams!</p>
+            <br>
+        
+          </button>
+
+        </p>
+      </div>
+    </div>
+  
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright: Luana & Siya
+    </div>
+  </footer>
 
 </body> 
 
