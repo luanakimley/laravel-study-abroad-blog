@@ -168,5 +168,11 @@ class PostsController extends Controller
         return redirect('/bookmarks');
     }
 
+    public function userPosts()
+    {
+        return view('profile')
+            ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
+    }
+
 }
 

@@ -1,9 +1,14 @@
 @extends('layouts.app')
 @section('content')
-<div class="w-full max-w-xs">
- <br>
- <br>
-    <form method="POST" action="{{ route('contact-form.store') }}" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+<div class="w-full max-w-xs m-auto">
+
+        <div class="py-16">
+            <h1 class="text-center text-5xl uppercase font-bold">
+                Contact Us
+            </h1>
+        </div>
+
+    <form method="POST" action="{{ route('contact-form.store') }}" class="w-full bg-white shadow-md rounded px-8 pt-3 pb-8 mb-4">
         <br>
         @if(Session::has('success')) 
 
@@ -86,7 +91,7 @@
       </div>
       <br>
       <div class="flex items-center justify-between">
-        <button  class="text-center bg-gray-700 hover:bg-gray-800 px-5 py-3 font-bold text-xl uppercase rounded-lg text-white">
+        <button  class="w-full text-center bg-gray-700 hover:bg-gray-800 px-5 py-3 font-bold text-xl uppercase rounded-lg text-white">
           Send
         </button>
       </div>

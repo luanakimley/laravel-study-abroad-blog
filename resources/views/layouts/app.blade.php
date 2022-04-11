@@ -49,7 +49,7 @@
                         <a class="no-underline hover:underline" href="/bookmarks">Bookmarks</a>
                 
                         
-                        <span class="font-bold">{{ Auth::user()->name }}</span>
+                        <a href="/profile" class="font-bold">{{ Auth::user()->name }}</a>
             
                         <a href="{{ route('logout') }}"
                            class="no-underline hover:underline"
