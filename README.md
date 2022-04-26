@@ -1,17 +1,22 @@
 # Study Abroad
-<<<<<<< HEAD
-![alt text](public/images/logo.png "Logo")
-⋅⋅⋅Browse through a Variety of Helpful Blogs.
+![alt text](https://ibb.co/S3DvWGj "Logo")
+## Our blog will inspire you to achieve your dreams!
+### View our complete application at :- 
+
 ### What We Offer
 * Publish your own blogs
 * Read through variety of blogs helpful for your future.
 * Use bookmarks to make your blogging experience more fullfilling.
-=======
-![alt text](/public/images/logo.png "Logo")
-⋅⋅⋅Browse through a Variety of Helpful Blogs.
->>>>>>> 9ddb2b8b1e303b5f9a2aaeef915ebe7a8cbc8729
-
 ======
+
+The Home Page
+![alt text](https://ibb.co/YX18jRf "Logo")
+======
+
+A glimpse of our blogs
+![alt text](https://ibb.co/2ND9Gfh "Logo")
+======
+
 ## Laravel 8 Complete Blog
 
 This repository is linked to [this youtube video](https://www.youtube.com/watch?v=HKJDLXsTr8A&t=4710s) where I show you how to create a complete blog in Laravel 8 using best practices.
