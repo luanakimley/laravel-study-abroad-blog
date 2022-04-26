@@ -19,11 +19,12 @@ A glimpse of our blogs
 
 Helpful Features We Offer to make your experience a memorable one
 + Filters
-Tags
+
+- Tags
 
 ![tags](https://i.ibb.co/592qT3J/filJPG.jpg)
 
-Bookmark your favorite ones
+- Bookmark your favorite ones
 
 ![tags](https://i.ibb.co/sjNt99X/bokomar.jpg)
 
@@ -35,6 +36,7 @@ Bookmark your favorite ones
 
 ![tags](https://i.ibb.co/T8s798N/comm.jpg)
 
+__
 
 *Technologies we Used-*
 
