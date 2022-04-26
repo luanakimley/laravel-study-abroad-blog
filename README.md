@@ -1,5 +1,5 @@
 # Study Abroad
-![alt text](https://ibb.co/S3DvWGj "Logo")
+![logo](https://ibb.co/S3DvWGj)
 ## Our blog will inspire you to achieve your dreams!
 ### View our complete application at :- 
 
@@ -10,11 +10,11 @@
 ======
 
 The Home Page
-![alt text](https://ibb.co/YX18jRf "Logo")
+![home](https://ibb.co/YX18jRf)
 ======
 
 A glimpse of our blogs
-![alt text](https://ibb.co/2ND9Gfh "Logo")
+![blogs](https://ibb.co/2ND9Gfh)
 ======
 
 ## Laravel 8 Complete Blog
