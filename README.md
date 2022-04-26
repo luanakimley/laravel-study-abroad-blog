@@ -1,10 +1,15 @@
 # Study Abroad
+<<<<<<< HEAD
 ![alt text](public/images/logo.png "Logo")
 ⋅⋅⋅Browse through a Variety of Helpful Blogs.
 ### What We Offer
 * Publish your own blogs
 * Read through variety of blogs helpful for your future.
 * Use bookmarks to make your blogging experience more fullfilling.
+=======
+![alt text](/public/images/logo.png "Logo")
+⋅⋅⋅Browse through a Variety of Helpful Blogs.
+>>>>>>> 9ddb2b8b1e303b5f9a2aaeef915ebe7a8cbc8729
 
 ======
 ## Laravel 8 Complete Blog

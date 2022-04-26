@@ -30,6 +30,8 @@ Route::post('/bookmark/{slug}/{user_id}', [App\Http\Controllers\PostsController:
 
 Route::get('/bookmarks', [App\Http\Controllers\PostsController::class, 'bookmarks']);
 
+Route::get('/profile', [App\Http\Controllers\PostsController::class, 'userPosts']);
+
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
