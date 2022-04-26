@@ -36,7 +36,6 @@ Helpful Features We Offer to make your experience a memorable one
 
 ![tags](https://i.ibb.co/T8s798N/comm.jpg)
 
-__
 
 *Technologies we Used-*
 
